@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Trial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const values = [
+        `<div class="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+	<img src="https://source.unsplash.com/random/300x300/?2" alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+	<div class="flex flex-col justify-between p-6 space-y-8">
+		<div class="space-y-2">
+			<h2 class="text-3xl font-semibold tracki">sams code</h2>
+			<p class="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+		</div>
+		<button type="button" class="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:bg-violet-400 dark:text-gray-900">Read more</button>
+	</div>
+</div>`,
+        `<div class="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+	<img src="https://source.unsplash.com/random/300x300/?2" alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+	<div class="flex flex-col justify-between p-6 space-y-8">
+		<div class="space-y-2">
+			<h2 class="text-3xl font-semibold tracki">vaibhav code</h2>
+			<p class="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+		</div>
+		<button type="button" class="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:bg-violet-400 dark:text-gray-900">Read more</button>
+	</div>
+</div>`,
+        `<div class="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+	<img src="https://source.unsplash.com/random/300x300/?2" alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+	<div class="flex flex-col justify-between p-6 space-y-8">
+		<div class="space-y-2">
+			<h2 class="text-3xl font-semibold tracki">Donec lectus leo</h2>
+			<p class="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+		</div>
+		<button type="button" class="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:bg-violet-400 dark:text-gray-900">Read more</button>
+	</div>
+</div>`,
+        `<div class="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+	<img src="https://source.unsplash.com/random/300x300/?2" alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+	<div class="flex flex-col justify-between p-6 space-y-8">
+		<div class="space-y-2">
+			<h2 class="text-3xl font-semibold tracki">Donec lectus leo</h2>
+			<p class="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
+		</div>
+		<button type="button" class="flex items-center justify-center w-full p-3 font-semibold tracki rounded-md dark:bg-violet-400 dark:text-gray-900">Read more</button>
+	</div>
+</div>`,
+      ];
+      function onbuttonhandler(value) {
+        switch (value) {
+          case "sam":
+            document.getElementById("output").innerHTML = values[0];
+            break;
+          case "vaibhav":
+          document.getElementById("output").innerHTML = values[1]
+            break;
+          case "sai":
+            document.getElementById(
+              "output"
+            ).innerHTML = `<div class="bg-black text-white">${value}</div>`;
+            break;
+          case "aniket":
+            document.getElementById(
+              "output"
+            ).innerHTML = `<div class="bg-black text-white">${value}</div>`;
+            break;
+          default:
+            alert("fucking somethign going wrong");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="w-full h-full flex">
+      <div
+        class="border w-3/6 h-full border-2 border-black flex flex-col justfiy-center items-center space-y-2 p-2"
+      >
+        <button
+          onclick="onbuttonhandler('sam')"
+          class="border p-1 bg-gray-400 hover:bg-black hover:text-white"
+        >
+          Sam
+        </button>
+        <button
+          onclick="onbuttonhandler('vaibhav')"
+          class="border p-1 bg-gray-400 hover:bg-black hover:text-white"
+        >
+          vaibhav
+        </button>
+        <button
+          onclick="onbuttonhandler('sai')"
+          class="border p-1 bg-gray-400 hover:bg-black hover:text-white"
+        >
+          sai
+        </button>
+        <button
+          onclick="onbuttonhandler('aniket')"
+          class="border p-1 bg-gray-400 hover:bg-black hover:text-white"
+        >
+          aniket
+        </button>
+      </div>
+      <div class="border w-3/6 h-full border-2 border-black" id="output">
+        <script>
+          document.getElementById("output").innerHTML = values[0];
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
